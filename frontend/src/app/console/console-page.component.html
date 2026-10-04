@@ -1,0 +1,17 @@
+<main class="app">
+  <header>
+    <a class="back" routerLink="/">← Back to the chat assistant</a>
+    <h1>{{ title }}</h1>
+    <p class="hint">
+      Manual test console for the RAG platform backend (see <code>rag/prompt.md</code> and
+      <code>rag/docs/learning-log.html</code>). Point it at your running FastAPI server
+      (default <code>http://localhost:8000</code>, configurable in
+      <code>src/environments/environment.ts</code>).
+    </p>
+  </header>
+
+  <app-health-panel></app-health-panel>
+  <app-ingest-panel></app-ingest-panel>
+  <app-search-panel></app-search-panel>
+  <app-chat-panel></app-chat-panel>
+</main>

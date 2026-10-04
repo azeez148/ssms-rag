@@ -1,0 +1,39 @@
+<section class="panel">
+  <h2>Ingest</h2>
+  <p class="hint">Plan Set 7 — POST /admin/ingest (idempotent: re-running with no source changes creates 0 chunks)</p>
+
+  <label>
+    Config path
+    <input type="text" [(ngModel)]="configPath" name="configPath" />
+  </label>
+
+  <label>
+    Chunk size
+    <input type="number" [(ngModel)]="chunkSize" name="chunkSize" />
+  </label>
+
+  <label>
+    Chunk overlap
+    <input type="number" [(ngModel)]="chunkOverlap" name="chunkOverlap" />
+  </label>
+
+  <button (click)="runIngest()" [disabled]="loading">
+    {{ loading ? 'Ingesting... (can take a while on first run)' : 'Run ingestion' }}
+  </button>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (result) {
+    <dl class="kv">
+      <dt>run_id</dt><dd>{{ result.run_id }}</dd>
+      <dt>status</dt><dd>{{ result.status }}</dd>
+      <dt>documents_processed</dt><dd>{{ result.documents_processed }}</dd>
+      <dt>documents_created</dt><dd>{{ result.documents_created }}</dd>
+      <dt>documents_updated</dt><dd>{{ result.documents_updated }}</dd>
+      <dt>documents_unchanged</dt><dd>{{ result.documents_unchanged }}</dd>
+      <dt>chunks_created</dt><dd>{{ result.chunks_created }}</dd>
+    </dl>
+  }
+</section>

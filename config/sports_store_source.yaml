@@ -1,0 +1,66 @@
+source:
+  type: postgres
+  name: sports_store
+  knowledge_base_id: sports-store
+  title: Sports Store
+  description: "Jerseys, shorts and boots: availability, sizes and prices."
+  suggested_questions:
+    - "Do you have Argentina jerseys?"
+    - "Which boots do you have for kids?"
+    - "What is the price of the FC Argentina 25-26 jersey?"
+    - "Show me white Arsenal shorts"
+    - "How many FC Argentina 25-26 are left?"
+    - "Today's sales"
+
+  # Staff chat actions: products (list, add, edit, stock), sales (record, show,
+  # edit, cancel, reports) and day management (start day, expenses, end day).
+  # Writes are proposed in the chat and only made, through the store API, when
+  # staff press Confirm. Type "help" in the chat for examples.
+  actions:
+    handler: plugins.sports_store.actions:SportsStoreActions
+    options:
+      api_url_env: SPORTS_STORE_API_URL
+      # Day management needs a store login (staff or admin).
+      api_mobile_env: SPORTS_STORE_API_MOBILE
+      api_password_env: SPORTS_STORE_API_PASSWORD
+      api_token_env: SPORTS_STORE_API_TOKEN
+      shop_id: 1
+      default_payment: cash
+      default_delivery: pickup
+      currency: "₹"
+      # Same walk-in customer the POS uses, so chat sales show up the same in reports.
+      walk_in_customer: {name: "In-store Customer", mobile: "0000000000", address: "In-store"}
+
+  connection:
+    env: SPORTS_STORE_DATABASE_URL
+
+  entities:
+    - name: products
+      query: >
+        SELECT
+          p.id AS id,
+          p.name AS name,
+          p.description AS description,
+          p.selling_price AS selling_price,
+          c.name AS category,
+          COALESCE(
+            (SELECT string_agg(ps.size || ' (' || ps.quantity || ' in stock)', ', ' ORDER BY ps.size)
+             FROM product_sizes ps
+             WHERE ps.product_id = p.id AND ps.quantity > 0),
+            'Currently out of stock'
+          ) AS available_sizes
+        FROM products p
+        LEFT JOIN categories c ON c.id = p.category_id
+        WHERE p.is_active = true AND p.can_listed = true
+      id_column: id
+      title_column: name
+      content_template: >
+        Product: {name}
+        Category: {category}
+        Description: {description}
+        Price: {selling_price}
+        Available sizes: {available_sizes}
+      metadata_columns:
+        - category
+      static_metadata:
+        entity_type: product

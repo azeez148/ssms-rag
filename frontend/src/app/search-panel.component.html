@@ -1,0 +1,94 @@
+<section class="panel">
+  <h2>Semantic Search</h2>
+  <p class="hint">
+    Plan Set 8/13/14/15/21 — POST /api/search (vector / keyword / hybrid; optional metadata filter; optional
+    cross-encoder rerank). Knowledge base is required — retrieval never mixes chunks across knowledge bases.
+  </p>
+
+  <label>
+    Knowledge base
+    <input
+      type="text"
+      [(ngModel)]="knowledgeBase"
+      name="knowledgeBase"
+      placeholder="e.g. sports-store, library"
+    />
+  </label>
+
+  <label>
+    Query
+    <input
+      type="text"
+      [(ngModel)]="query"
+      name="query"
+      (keyup.enter)="runSearch()"
+      placeholder="e.g. Do you have Argentina jerseys?"
+    />
+  </label>
+
+  <label class="top-k">
+    Top K
+    <input type="number" [(ngModel)]="topK" name="topK" min="1" max="50" />
+  </label>
+
+  <label>
+    Mode
+    <select [(ngModel)]="mode" name="mode">
+      @for (m of modes; track m) {
+        <option [value]="m">{{ m }}</option>
+      }
+    </select>
+  </label>
+
+  <div class="filter-row">
+    <label>
+      Filter key (optional)
+      <input type="text" [(ngModel)]="filterKey" name="filterKey" placeholder="category" />
+    </label>
+    <label>
+      Filter value
+      <input type="text" [(ngModel)]="filterValue" name="filterValue" placeholder="e.g. Jersey, Boot-Adult" />
+    </label>
+  </div>
+
+  <label class="checkbox-row">
+    <input type="checkbox" [(ngModel)]="rerank" name="rerank" />
+    Rerank (fetch top_k&times;4 candidates, then cross-encoder rerank to top_k)
+  </label>
+
+  <button (click)="runSearch()" [disabled]="loading">
+    {{ loading ? 'Searching...' : 'Search' }}
+  </button>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (searched && !loading && !error && results.length === 0) {
+    <p class="hint">No results.</p>
+  }
+
+  @if (results.length > 0) {
+    <ol class="results">
+      @for (result of results; track result.document_id + result.content) {
+        <li class="result-card">
+          <div class="result-header">
+            <span class="title">{{ result.document_title || result.document_id }}</span>
+            <span class="score">
+              {{ mode === 'vector' && !rerank ? 'similarity' : 'score' }} {{ formatSimilarity(result.similarity) }}
+            </span>
+          </div>
+          <p class="content">{{ result.content }}</p>
+          <div class="meta">
+            <span><strong>knowledge_base:</strong> {{ result.knowledge_base_id }}</span>
+            <span><strong>source:</strong> {{ result.source }}</span>
+            <span><strong>document_id:</strong> {{ result.document_id }}</span>
+            @for (entry of result.metadata | keyvalue; track entry.key) {
+              <span><strong>{{ entry.key }}:</strong> {{ entry.value }}</span>
+            }
+          </div>
+        </li>
+      }
+    </ol>
+  }
+</section>

@@ -1,0 +1,182 @@
+[
+  {"category": "exact-match", "question": "Do you have a Neymar Santos third kit with a collar?", "expected_document_ids": ["products-4"]},
+  {"category": "exact-match", "question": "Is there a Valverde Real Madrid home jersey for the 25-26 season?", "expected_document_ids": ["products-17"]},
+  {"category": "exact-match", "question": "What is the price of the FC Argentina 25-26 jersey?", "expected_document_ids": ["products-41"]},
+  {"category": "exact-match", "question": "I'm looking for a retro Argentina 2006 home jersey with Messi's number 19.", "expected_document_ids": ["products-352"]},
+  {"category": "exact-match", "question": "Is there a black special edition Argentina jersey for Messi?", "expected_document_ids": ["products-227"]},
+  {"category": "exact-match", "question": "Do you have the Argentina away jersey with Messi's number 10?", "expected_document_ids": ["products-276"]},
+  {"category": "exact-match", "question": "Looking for an embroidered Argentina home 2006 jersey with Messi 19.", "expected_document_ids": ["products-551"]},
+  {"category": "exact-match", "question": "Do you have white Arsenal shorts?", "expected_document_ids": ["products-1"]},
+  {"category": "exact-match", "question": "Is there an Odegaard Arsenal third jersey with a collar for 25-26?", "expected_document_ids": ["products-9"]},
+  {"category": "exact-match", "question": "Do you have a Saliba Arsenal away jersey?", "expected_document_ids": ["products-28"]},
+  {"category": "exact-match", "question": "Looking for a Gyokeres Arsenal home jersey for 25-26.", "expected_document_ids": ["products-12"]},
+  {"category": "exact-match", "question": "Do you have FELO Genesis football boots?", "expected_document_ids": ["products-44"]},
+  {"category": "exact-match", "question": "Is there a FELO Signature boot?", "expected_document_ids": ["products-48"]},
+  {"category": "exact-match", "question": "Do you have a Virgil van Dijk Liverpool away jersey for 25-26?", "expected_document_ids": ["products-15"]},
+  {"category": "exact-match", "question": "Looking for a Dembele PSG home jersey for 25-26.", "expected_document_ids": ["products-16"]},
+  {"category": "exact-match", "question": "Do you have a De Bruyne Napoli jersey for 25-26?", "expected_document_ids": ["products-30"]},
+  {"category": "exact-match", "question": "Is there a Sesko Manchester United jersey for 25-26?", "expected_document_ids": ["products-33"]},
+  {"category": "exact-match", "question": "Do you have a Ronaldo Al Nassr home jersey for 25-26?", "expected_document_ids": ["products-36"]},
+
+  {
+    "category": "multi-document",
+    "question": "Do you sell the Argentina 2026 World Cup home kit with Messi?",
+    "expected_document_ids": ["products-762", "products-767"]
+  },
+  {
+    "category": "multi-document",
+    "question": "Is there a Wirtz Liverpool home full sleeve jersey for 25-26?",
+    "expected_document_ids": ["products-10", "products-37"]
+  },
+  {
+    "category": "multi-document",
+    "question": "What SEGA brand football boots do you have?",
+    "expected_document_ids": [
+      "products-46", "products-50", "products-53", "products-54", "products-59", "products-65",
+      "products-66", "products-70", "products-71", "products-83", "products-322", "products-326",
+      "products-328", "products-331", "products-342", "products-343"
+    ]
+  },
+  {
+    "category": "multi-document",
+    "question": "Do you have FC Barcelona shorts?",
+    "expected_document_ids": ["products-23", "products-119", "products-140"]
+  },
+
+  {
+    "category": "simple",
+    "question": "Do you have any football boots?",
+    "expected_document_ids": ["products-43", "products-44", "products-45", "products-46", "products-47", "products-48", "products-49", "products-50", "products-51", "products-52"]
+  },
+  {
+    "category": "simple",
+    "question": "Do you sell t-shirts?",
+    "expected_document_ids": ["products-95", "products-96", "products-286", "products-287", "products-288", "products-289", "products-290"]
+  },
+  {
+    "category": "simple",
+    "question": "Do you have track pants?",
+    "expected_document_ids": ["products-97", "products-98", "products-100", "products-235", "products-236", "products-237"]
+  },
+  {
+    "category": "simple",
+    "question": "Do you have any football-branded merchandise?",
+    "expected_document_ids": ["products-90", "products-91", "products-92", "products-93", "products-94", "products-435", "products-436", "products-438"]
+  },
+  {
+    "category": "simple",
+    "question": "Do you sell embroidered shorts?",
+    "expected_document_ids": ["products-22", "products-23", "products-24", "products-25", "products-26", "products-27", "products-101", "products-102"]
+  },
+  {
+    "category": "simple",
+    "question": "Do you have football jerseys in stock?",
+    "expected_document_ids": ["products-2", "products-3", "products-4", "products-5", "products-6", "products-7", "products-8", "products-9"]
+  },
+
+  {
+    "category": "semantic",
+    "question": "Do you have a supporter's shirt for the Albiceleste's 2026 World Cup campaign led by their captain?",
+    "expected_document_ids": ["products-767"]
+  },
+  {
+    "category": "semantic",
+    "question": "Are there any green-colored football boots available?",
+    "expected_document_ids": ["products-56"]
+  },
+  {
+    "category": "semantic",
+    "question": "Do you have any brown bottoms with a triple-stripe pattern down the side?",
+    "expected_document_ids": ["products-299"]
+  },
+  {
+    "category": "semantic",
+    "question": "Is there a light grey pair of trousers with a triple-stripe design?",
+    "expected_document_ids": ["products-240"]
+  },
+  {
+    "category": "semantic",
+    "question": "Is there a home shirt for Real Madrid's Uruguayan midfielder for the upcoming season?",
+    "expected_document_ids": ["products-17"]
+  },
+  {
+    "category": "semantic",
+    "question": "Do you have a vintage-style Argentine home shirt from the mid-2000s with the number 19?",
+    "expected_document_ids": ["products-352"]
+  },
+
+  {
+    "category": "ambiguous",
+    "question": "Do you have any Messi jerseys?",
+    "expected_document_ids": ["products-11", "products-38", "products-111", "products-161", "products-184", "products-185", "products-186", "products-193", "products-196", "products-199", "products-203", "products-208", "products-211", "products-221", "products-227", "products-276", "products-352", "products-390", "products-443", "products-483"]
+  },
+  {
+    "category": "ambiguous",
+    "question": "Are there Ronaldo jerseys available?",
+    "expected_document_ids": ["products-36", "products-118", "products-122", "products-151", "products-162", "products-168", "products-169", "products-171", "products-534", "products-566", "products-817"]
+  },
+  {
+    "category": "ambiguous",
+    "question": "Do you have Barcelona jerseys?",
+    "expected_document_ids": ["products-2", "products-5", "products-7", "products-23", "products-29", "products-34", "products-99", "products-111", "products-119", "products-125", "products-128", "products-140", "products-149", "products-150", "products-153", "products-154", "products-161", "products-173", "products-175", "products-184"]
+  },
+  {
+    "category": "ambiguous",
+    "question": "Is there any Real Madrid merchandise?",
+    "expected_document_ids": ["products-3", "products-6", "products-17", "products-27", "products-31", "products-32", "products-100", "products-105", "products-106", "products-113", "products-129", "products-132", "products-156", "products-168", "products-169", "products-170", "products-171", "products-172", "products-182", "products-190"]
+  },
+  {
+    "category": "ambiguous",
+    "question": "Do you have Argentina jerseys?",
+    "expected_document_ids": ["products-38", "products-41", "products-196", "products-199", "products-203", "products-208", "products-216", "products-217", "products-227", "products-276", "products-352", "products-356", "products-487", "products-539", "products-550", "products-551", "products-735", "products-762", "products-767", "products-776"]
+  },
+  {
+    "category": "ambiguous",
+    "question": "Do you have Liverpool jerseys?",
+    "expected_document_ids": ["products-10", "products-15", "products-37", "products-102", "products-107", "products-112", "products-116", "products-120", "products-123", "products-126", "products-127", "products-134", "products-148", "products-165", "products-167", "products-290", "products-291", "products-292", "products-293", "products-357"]
+  },
+
+  {"category": "unsupported", "question": "What is the capital of France?", "expected_document_ids": []},
+  {"category": "unsupported", "question": "What is the boiling point of tungsten?", "expected_document_ids": []},
+  {"category": "unsupported", "question": "Can you help me file my taxes?", "expected_document_ids": []},
+  {"category": "unsupported", "question": "What's the weather like today?", "expected_document_ids": []},
+  {"category": "unsupported", "question": "Do you sell laptops or smartphones?", "expected_document_ids": []},
+  {"category": "unsupported", "question": "Can you recommend a good restaurant nearby?", "expected_document_ids": []},
+
+  {
+    "category": "follow-up",
+    "question": "Is it available in size L?",
+    "history": [{"question": "Do you have a Neymar Santos third kit with a collar?", "answer": "Yes, we have that jersey in stock."}],
+    "expected_document_ids": ["products-4"]
+  },
+  {
+    "category": "follow-up",
+    "question": "How much does it cost?",
+    "history": [{"question": "Is there a FELO Genesis football boot?", "answer": "Yes, it's available."}],
+    "expected_document_ids": ["products-44"]
+  },
+  {
+    "category": "follow-up",
+    "question": "What sizes come in stock?",
+    "history": [{"question": "Do you have a Sesko Manchester United jersey for 25-26?", "answer": "Yes, we do."}],
+    "expected_document_ids": ["products-33"]
+  },
+  {
+    "category": "follow-up",
+    "question": "Can you tell me the price?",
+    "history": [{"question": "Is there a De Bruyne Napoli jersey for 25-26?", "answer": "Yes, available now."}],
+    "expected_document_ids": ["products-30"]
+  },
+  {
+    "category": "follow-up",
+    "question": "What category is it listed under?",
+    "history": [{"question": "Is there an Odegaard Arsenal third jersey with a collar for 25-26?", "answer": "Yes, it's in our catalog."}],
+    "expected_document_ids": ["products-9"]
+  },
+  {
+    "category": "follow-up",
+    "question": "Is it in stock right now?",
+    "history": [{"question": "Is there a FELO Signature boot?", "answer": "Yes, it's available."}],
+    "expected_document_ids": ["products-48"]
+  }
+]

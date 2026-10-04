@@ -1,0 +1,3707 @@
+{
+  "generated_at": "2026-09-20T11:40:17.883318+00:00",
+  "without_rerank": {
+    "rerank": false,
+    "overall": {
+      "num_questions": 52,
+      "num_excluded_from_retrieval_scoring": 6,
+      "recall_at": {
+        "1": 0.565,
+        "3": 0.696,
+        "5": 0.804
+      },
+      "mrr": 0.652,
+      "answer_appropriateness_rate": 1.0,
+      "groundedness_rate": 1.0,
+      "citation_correctness_rate": 0.565,
+      "avg_total_latency_ms": 14.266,
+      "avg_retrieval_latency_ms": 13.424,
+      "avg_generation_latency_ms": 0.009,
+      "avg_estimated_prompt_tokens": 335.327,
+      "avg_estimated_completion_tokens": 67.904
+    },
+    "by_category": {
+      "exact-match": {
+        "num_questions": 18,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.722,
+          "3": 0.889,
+          "5": 1.0
+        },
+        "mrr": 0.819,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.722,
+        "avg_total_latency_ms": 15.484,
+        "avg_retrieval_latency_ms": 14.527,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 388.556,
+        "avg_estimated_completion_tokens": 78.944
+      },
+      "multi-document": {
+        "num_questions": 4,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.5,
+          "3": 0.5,
+          "5": 0.75
+        },
+        "mrr": 0.562,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.5,
+        "avg_total_latency_ms": 12.488,
+        "avg_retrieval_latency_ms": 11.633,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 392.75,
+        "avg_estimated_completion_tokens": 78
+      },
+      "simple": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.5,
+          "3": 0.5,
+          "5": 0.667
+        },
+        "mrr": 0.542,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.5,
+        "avg_total_latency_ms": 14.72,
+        "avg_retrieval_latency_ms": 13.81,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 359.667,
+        "avg_estimated_completion_tokens": 71.333
+      },
+      "semantic": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.167,
+          "3": 0.167,
+          "5": 0.333
+        },
+        "mrr": 0.208,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.167,
+        "avg_total_latency_ms": 13.317,
+        "avg_retrieval_latency_ms": 12.4,
+        "avg_generation_latency_ms": 0.012,
+        "avg_estimated_prompt_tokens": 377.833,
+        "avg_estimated_completion_tokens": 72
+      },
+      "ambiguous": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.5,
+          "3": 0.667,
+          "5": 0.667
+        },
+        "mrr": 0.583,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.5,
+        "avg_total_latency_ms": 12.907,
+        "avg_retrieval_latency_ms": 11.873,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 379.167,
+        "avg_estimated_completion_tokens": 77.833
+      },
+      "unsupported": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 6,
+        "recall_at": null,
+        "mrr": null,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": null,
+        "citation_correctness_rate": null,
+        "avg_total_latency_ms": 13.812,
+        "avg_retrieval_latency_ms": 13.775,
+        "avg_generation_latency_ms": 0.0,
+        "avg_estimated_prompt_tokens": 0,
+        "avg_estimated_completion_tokens": 0
+      },
+      "follow-up": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.667,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "mrr": 0.833,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.667,
+        "avg_total_latency_ms": 14.105,
+        "avg_retrieval_latency_ms": 13.152,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 362,
+        "avg_estimated_completion_tokens": 78.5
+      }
+    },
+    "rows": [
+      {
+        "category": "exact-match",
+        "question": "Do you have a Neymar Santos third kit with a collar?",
+        "expected_document_ids": [
+          "products-4"
+        ],
+        "retrieved_ids": [
+          "products-568",
+          "products-4",
+          "products-150",
+          "products-1251",
+          "products-570"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "retrieval_latency_ms": 40.86,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 42.35,
+        "estimated_prompt_tokens": 412,
+        "estimated_completion_tokens": 91
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a Valverde Real Madrid home jersey for the 25-26 season?",
+        "expected_document_ids": [
+          "products-17"
+        ],
+        "retrieved_ids": [
+          "products-658",
+          "products-666",
+          "products-653",
+          "products-774",
+          "products-17"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.2,
+        "retrieval_latency_ms": 13.06,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 14.1,
+        "estimated_prompt_tokens": 401,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "exact-match",
+        "question": "What is the price of the FC Argentina 25-26 jersey?",
+        "expected_document_ids": [
+          "products-41"
+        ],
+        "retrieved_ids": [
+          "products-41",
+          "products-39",
+          "products-42",
+          "products-352",
+          "products-767"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.05,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.01,
+        "estimated_prompt_tokens": 370,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "exact-match",
+        "question": "I'm looking for a retro Argentina 2006 home jersey with Messi's number 19.",
+        "expected_document_ids": [
+          "products-352"
+        ],
+        "retrieved_ids": [
+          "products-352",
+          "products-767",
+          "products-38",
+          "products-1157",
+          "products-208"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.26,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.37,
+        "estimated_prompt_tokens": 399,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a black special edition Argentina jersey for Messi?",
+        "expected_document_ids": [
+          "products-227"
+        ],
+        "retrieved_ids": [
+          "products-227",
+          "products-199",
+          "products-767",
+          "products-352",
+          "products-276"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.94,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.91,
+        "estimated_prompt_tokens": 366,
+        "estimated_completion_tokens": 75
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have the Argentina away jersey with Messi's number 10?",
+        "expected_document_ids": [
+          "products-276"
+        ],
+        "retrieved_ids": [
+          "products-276",
+          "products-196",
+          "products-1283",
+          "products-767",
+          "products-352"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.06,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.08,
+        "estimated_prompt_tokens": 386,
+        "estimated_completion_tokens": 63
+      },
+      {
+        "category": "exact-match",
+        "question": "Looking for an embroidered Argentina home 2006 jersey with Messi 19.",
+        "expected_document_ids": [
+          "products-551"
+        ],
+        "retrieved_ids": [
+          "products-551",
+          "products-550",
+          "products-352",
+          "products-38",
+          "products-1173"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 16.23,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 17.35,
+        "estimated_prompt_tokens": 416,
+        "estimated_completion_tokens": 91
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have white Arsenal shorts?",
+        "expected_document_ids": [
+          "products-1"
+        ],
+        "retrieved_ids": [
+          "products-1",
+          "products-25",
+          "products-368",
+          "products-408",
+          "products-1207"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.41,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 16.39,
+        "estimated_prompt_tokens": 359,
+        "estimated_completion_tokens": 71
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there an Odegaard Arsenal third jersey with a collar for 25-26?",
+        "expected_document_ids": [
+          "products-9"
+        ],
+        "retrieved_ids": [
+          "products-9",
+          "products-117",
+          "products-408",
+          "products-603",
+          "products-830"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 16.83,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 17.92,
+        "estimated_prompt_tokens": 423,
+        "estimated_completion_tokens": 94
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a Saliba Arsenal away jersey?",
+        "expected_document_ids": [
+          "products-28"
+        ],
+        "retrieved_ids": [
+          "products-28",
+          "products-609",
+          "products-628",
+          "products-427",
+          "products-368"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.62,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 14.65,
+        "estimated_prompt_tokens": 382,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "exact-match",
+        "question": "Looking for a Gyokeres Arsenal home jersey for 25-26.",
+        "expected_document_ids": [
+          "products-12"
+        ],
+        "retrieved_ids": [
+          "products-12",
+          "products-604",
+          "products-427",
+          "products-602",
+          "products-401"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.7,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 15.53,
+        "estimated_prompt_tokens": 396,
+        "estimated_completion_tokens": 85
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have FELO Genesis football boots?",
+        "expected_document_ids": [
+          "products-44"
+        ],
+        "retrieved_ids": [
+          "products-310",
+          "products-314",
+          "products-67",
+          "products-81",
+          "products-44"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.2,
+        "retrieval_latency_ms": 11.85,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.56,
+        "estimated_prompt_tokens": 320,
+        "estimated_completion_tokens": 69
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a FELO Signature boot?",
+        "expected_document_ids": [
+          "products-48"
+        ],
+        "retrieved_ids": [
+          "products-48",
+          "products-340",
+          "products-341",
+          "products-52",
+          "products-51"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.54,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.16,
+        "estimated_prompt_tokens": 288,
+        "estimated_completion_tokens": 60
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a Virgil van Dijk Liverpool away jersey for 25-26?",
+        "expected_document_ids": [
+          "products-15"
+        ],
+        "retrieved_ids": [
+          "products-620",
+          "products-621",
+          "products-15",
+          "products-618",
+          "products-357"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieval_latency_ms": 11.86,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.75,
+        "estimated_prompt_tokens": 430,
+        "estimated_completion_tokens": 89
+      },
+      {
+        "category": "exact-match",
+        "question": "Looking for a Dembele PSG home jersey for 25-26.",
+        "expected_document_ids": [
+          "products-16"
+        ],
+        "retrieved_ids": [
+          "products-16",
+          "products-586",
+          "products-587",
+          "products-12",
+          "products-7"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.8,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.59,
+        "estimated_prompt_tokens": 377,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a De Bruyne Napoli jersey for 25-26?",
+        "expected_document_ids": [
+          "products-30"
+        ],
+        "retrieved_ids": [
+          "products-30",
+          "products-585",
+          "products-584",
+          "products-7",
+          "products-587"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.9,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.74,
+        "estimated_prompt_tokens": 418,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a Sesko Manchester United jersey for 25-26?",
+        "expected_document_ids": [
+          "products-33"
+        ],
+        "retrieved_ids": [
+          "products-637",
+          "products-33",
+          "products-634",
+          "products-633",
+          "products-636"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "retrieval_latency_ms": 11.65,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.51,
+        "estimated_prompt_tokens": 406,
+        "estimated_completion_tokens": 84
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a Ronaldo Al Nassr home jersey for 25-26?",
+        "expected_document_ids": [
+          "products-36"
+        ],
+        "retrieved_ids": [
+          "products-36",
+          "products-566",
+          "products-534",
+          "products-631",
+          "products-634"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.86,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.75,
+        "estimated_prompt_tokens": 445,
+        "estimated_completion_tokens": 85
+      },
+      {
+        "category": "multi-document",
+        "question": "Do you sell the Argentina 2026 World Cup home kit with Messi?",
+        "expected_document_ids": [
+          "products-762",
+          "products-767"
+        ],
+        "retrieved_ids": [
+          "products-767",
+          "products-762",
+          "products-778",
+          "products-776",
+          "products-1283"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.88,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.82,
+        "estimated_prompt_tokens": 452,
+        "estimated_completion_tokens": 94
+      },
+      {
+        "category": "multi-document",
+        "question": "Is there a Wirtz Liverpool home full sleeve jersey for 25-26?",
+        "expected_document_ids": [
+          "products-10",
+          "products-37"
+        ],
+        "retrieved_ids": [
+          "products-617",
+          "products-357",
+          "products-366",
+          "products-10",
+          "products-37"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.25,
+        "retrieval_latency_ms": 11.96,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.86,
+        "estimated_prompt_tokens": 411,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "multi-document",
+        "question": "What SEGA brand football boots do you have?",
+        "expected_document_ids": [
+          "products-46",
+          "products-50",
+          "products-53",
+          "products-54",
+          "products-59",
+          "products-65",
+          "products-66",
+          "products-70",
+          "products-71",
+          "products-83",
+          "products-322",
+          "products-326",
+          "products-328",
+          "products-331",
+          "products-342",
+          "products-343"
+        ],
+        "retrieved_ids": [
+          "products-46",
+          "products-65",
+          "products-326",
+          "products-54",
+          "products-83"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.45,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.09,
+        "estimated_prompt_tokens": 299,
+        "estimated_completion_tokens": 60
+      },
+      {
+        "category": "multi-document",
+        "question": "Do you have FC Barcelona shorts?",
+        "expected_document_ids": [
+          "products-23",
+          "products-119",
+          "products-140"
+        ],
+        "retrieved_ids": [
+          "products-756",
+          "products-681",
+          "products-25",
+          "products-746",
+          "products-732"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 11.24,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.18,
+        "estimated_prompt_tokens": 409,
+        "estimated_completion_tokens": 76
+      },
+      {
+        "category": "simple",
+        "question": "Do you have any football boots?",
+        "expected_document_ids": [
+          "products-43",
+          "products-44",
+          "products-45",
+          "products-46",
+          "products-47",
+          "products-48",
+          "products-49",
+          "products-50",
+          "products-51",
+          "products-52"
+        ],
+        "retrieved_ids": [
+          "products-432",
+          "products-309",
+          "products-311",
+          "products-43",
+          "products-339"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.25,
+        "retrieval_latency_ms": 13.04,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.75,
+        "estimated_prompt_tokens": 327,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "simple",
+        "question": "Do you sell t-shirts?",
+        "expected_document_ids": [
+          "products-95",
+          "products-96",
+          "products-286",
+          "products-287",
+          "products-288",
+          "products-289",
+          "products-290"
+        ],
+        "retrieved_ids": [
+          "products-96",
+          "products-95",
+          "products-803",
+          "products-804",
+          "products-806"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.63,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 14.62,
+        "estimated_prompt_tokens": 436,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "simple",
+        "question": "Do you have track pants?",
+        "expected_document_ids": [
+          "products-97",
+          "products-98",
+          "products-100",
+          "products-235",
+          "products-236",
+          "products-237"
+        ],
+        "retrieved_ids": [
+          "products-98",
+          "products-97",
+          "products-514",
+          "products-515",
+          "products-252"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.31,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 16.27,
+        "estimated_prompt_tokens": 361,
+        "estimated_completion_tokens": 81
+      },
+      {
+        "category": "simple",
+        "question": "Do you have any football-branded merchandise?",
+        "expected_document_ids": [
+          "products-90",
+          "products-91",
+          "products-92",
+          "products-93",
+          "products-94",
+          "products-435",
+          "products-436",
+          "products-438"
+        ],
+        "retrieved_ids": [
+          "products-40",
+          "products-752",
+          "products-457",
+          "products-441",
+          "products-796"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 16.2,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 17.26,
+        "estimated_prompt_tokens": 376,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "simple",
+        "question": "Do you sell embroidered shorts?",
+        "expected_document_ids": [
+          "products-22",
+          "products-23",
+          "products-24",
+          "products-25",
+          "products-26",
+          "products-27",
+          "products-101",
+          "products-102"
+        ],
+        "retrieved_ids": [
+          "products-27",
+          "products-24",
+          "products-102",
+          "products-26",
+          "products-101"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.1,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.93,
+        "estimated_prompt_tokens": 321,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "simple",
+        "question": "Do you have football jerseys in stock?",
+        "expected_document_ids": [
+          "products-2",
+          "products-3",
+          "products-4",
+          "products-5",
+          "products-6",
+          "products-7",
+          "products-8",
+          "products-9"
+        ],
+        "retrieved_ids": [
+          "products-41",
+          "products-40",
+          "products-39",
+          "products-42",
+          "products-29"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 11.58,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.49,
+        "estimated_prompt_tokens": 337,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "semantic",
+        "question": "Do you have a supporter's shirt for the Albiceleste's 2026 World Cup campaign led by their captain?",
+        "expected_document_ids": [
+          "products-767"
+        ],
+        "retrieved_ids": [
+          "products-352",
+          "products-38",
+          "products-350",
+          "products-756",
+          "products-276"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 13.41,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 14.46,
+        "estimated_prompt_tokens": 363,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "semantic",
+        "question": "Are there any green-colored football boots available?",
+        "expected_document_ids": [
+          "products-56"
+        ],
+        "retrieved_ids": [
+          "products-310",
+          "products-116",
+          "products-312",
+          "products-174",
+          "products-504"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 12.04,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.88,
+        "estimated_prompt_tokens": 325,
+        "estimated_completion_tokens": 69
+      },
+      {
+        "category": "semantic",
+        "question": "Do you have any brown bottoms with a triple-stripe pattern down the side?",
+        "expected_document_ids": [
+          "products-299"
+        ],
+        "retrieved_ids": [
+          "products-687",
+          "products-253",
+          "products-256",
+          "products-254",
+          "products-688"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 12.34,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.17,
+        "estimated_prompt_tokens": 383,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "semantic",
+        "question": "Is there a light grey pair of trousers with a triple-stripe design?",
+        "expected_document_ids": [
+          "products-240"
+        ],
+        "retrieved_ids": [
+          "products-507",
+          "products-244",
+          "products-236",
+          "products-240",
+          "products-250"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.25,
+        "retrieval_latency_ms": 11.94,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.75,
+        "estimated_prompt_tokens": 357,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "semantic",
+        "question": "Is there a home shirt for Real Madrid's Uruguayan midfielder for the upcoming season?",
+        "expected_document_ids": [
+          "products-17"
+        ],
+        "retrieved_ids": [
+          "products-730",
+          "products-554",
+          "products-787",
+          "products-656",
+          "products-352"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 12.08,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.03,
+        "estimated_prompt_tokens": 411,
+        "estimated_completion_tokens": 79
+      },
+      {
+        "category": "semantic",
+        "question": "Do you have a vintage-style Argentine home shirt from the mid-2000s with the number 19?",
+        "expected_document_ids": [
+          "products-352"
+        ],
+        "retrieved_ids": [
+          "products-352",
+          "products-551",
+          "products-550",
+          "products-767",
+          "products-41"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.59,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.02,
+        "total_latency_ms": 13.61,
+        "estimated_prompt_tokens": 428,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have any Messi jerseys?",
+        "expected_document_ids": [
+          "products-11",
+          "products-38",
+          "products-111",
+          "products-161",
+          "products-184",
+          "products-185",
+          "products-186",
+          "products-193",
+          "products-196",
+          "products-199",
+          "products-203",
+          "products-208",
+          "products-211",
+          "products-221",
+          "products-227",
+          "products-276",
+          "products-352",
+          "products-390",
+          "products-443",
+          "products-483"
+        ],
+        "retrieved_ids": [
+          "products-352",
+          "products-756",
+          "products-1157",
+          "products-767",
+          "products-732"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.82,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.92,
+        "estimated_prompt_tokens": 403,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "ambiguous",
+        "question": "Are there Ronaldo jerseys available?",
+        "expected_document_ids": [
+          "products-36",
+          "products-118",
+          "products-122",
+          "products-151",
+          "products-162",
+          "products-168",
+          "products-169",
+          "products-171",
+          "products-534",
+          "products-566",
+          "products-817"
+        ],
+        "retrieved_ids": [
+          "products-534",
+          "products-122",
+          "products-118",
+          "products-566",
+          "products-36"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.7,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.68,
+        "estimated_prompt_tokens": 390,
+        "estimated_completion_tokens": 96
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have Barcelona jerseys?",
+        "expected_document_ids": [
+          "products-2",
+          "products-5",
+          "products-7",
+          "products-23",
+          "products-29",
+          "products-34",
+          "products-99",
+          "products-111",
+          "products-119",
+          "products-125",
+          "products-128",
+          "products-140",
+          "products-149",
+          "products-150",
+          "products-153",
+          "products-154",
+          "products-161",
+          "products-173",
+          "products-175",
+          "products-184"
+        ],
+        "retrieved_ids": [
+          "products-409",
+          "products-756",
+          "products-399",
+          "products-416",
+          "products-682"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 11.86,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.82,
+        "estimated_prompt_tokens": 351,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "ambiguous",
+        "question": "Is there any Real Madrid merchandise?",
+        "expected_document_ids": [
+          "products-3",
+          "products-6",
+          "products-17",
+          "products-27",
+          "products-31",
+          "products-32",
+          "products-100",
+          "products-105",
+          "products-106",
+          "products-113",
+          "products-129",
+          "products-132",
+          "products-156",
+          "products-168",
+          "products-169",
+          "products-170",
+          "products-171",
+          "products-172",
+          "products-182",
+          "products-190"
+        ],
+        "retrieved_ids": [
+          "products-402",
+          "products-739",
+          "products-410",
+          "products-787",
+          "products-554"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 11.68,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.75,
+        "estimated_prompt_tokens": 385,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have Argentina jerseys?",
+        "expected_document_ids": [
+          "products-38",
+          "products-41",
+          "products-196",
+          "products-199",
+          "products-203",
+          "products-208",
+          "products-216",
+          "products-217",
+          "products-227",
+          "products-276",
+          "products-352",
+          "products-356",
+          "products-487",
+          "products-539",
+          "products-550",
+          "products-551",
+          "products-735",
+          "products-762",
+          "products-767",
+          "products-776"
+        ],
+        "retrieved_ids": [
+          "products-41",
+          "products-352",
+          "products-227",
+          "products-276",
+          "products-551"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 11.64,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.58,
+        "estimated_prompt_tokens": 352,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have Liverpool jerseys?",
+        "expected_document_ids": [
+          "products-10",
+          "products-15",
+          "products-37",
+          "products-102",
+          "products-107",
+          "products-112",
+          "products-116",
+          "products-120",
+          "products-123",
+          "products-126",
+          "products-127",
+          "products-134",
+          "products-148",
+          "products-165",
+          "products-167",
+          "products-290",
+          "products-291",
+          "products-292",
+          "products-293",
+          "products-357"
+        ],
+        "retrieved_ids": [
+          "products-381",
+          "products-357",
+          "products-733",
+          "products-404",
+          "products-428"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "retrieval_latency_ms": 11.54,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 12.69,
+        "estimated_prompt_tokens": 394,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "unsupported",
+        "question": "What is the capital of France?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 11.8,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 11.84,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "What is the boiling point of tungsten?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 13.62,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 13.66,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "Can you help me file my taxes?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 14.99,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 15.02,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "What's the weather like today?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 12.05,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 12.09,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "Do you sell laptops or smartphones?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 16.08,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 16.12,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "Can you recommend a good restaurant nearby?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 14.11,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 14.14,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "follow-up",
+        "question": "Is it available in size L?",
+        "expected_document_ids": [
+          "products-4"
+        ],
+        "retrieved_ids": [
+          "products-568",
+          "products-4",
+          "products-1251",
+          "products-150",
+          "products-704"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "retrieval_latency_ms": 12.78,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.81,
+        "estimated_prompt_tokens": 387,
+        "estimated_completion_tokens": 91
+      },
+      {
+        "category": "follow-up",
+        "question": "How much does it cost?",
+        "expected_document_ids": [
+          "products-44"
+        ],
+        "retrieved_ids": [
+          "products-44",
+          "products-52",
+          "products-310",
+          "products-314",
+          "products-67"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.24,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.03,
+        "estimated_prompt_tokens": 306,
+        "estimated_completion_tokens": 60
+      },
+      {
+        "category": "follow-up",
+        "question": "What sizes come in stock?",
+        "expected_document_ids": [
+          "products-33"
+        ],
+        "retrieved_ids": [
+          "products-637",
+          "products-33",
+          "products-405",
+          "products-631",
+          "products-29"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "retrieval_latency_ms": 12.32,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.33,
+        "estimated_prompt_tokens": 375,
+        "estimated_completion_tokens": 84
+      },
+      {
+        "category": "follow-up",
+        "question": "Can you tell me the price?",
+        "expected_document_ids": [
+          "products-30"
+        ],
+        "retrieved_ids": [
+          "products-30",
+          "products-585",
+          "products-584",
+          "products-7",
+          "products-587"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 12.25,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 13.27,
+        "estimated_prompt_tokens": 410,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "follow-up",
+        "question": "What category is it listed under?",
+        "expected_document_ids": [
+          "products-9"
+        ],
+        "retrieved_ids": [
+          "products-9",
+          "products-117",
+          "products-408",
+          "products-760",
+          "products-830"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.45,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 14.51,
+        "estimated_prompt_tokens": 404,
+        "estimated_completion_tokens": 94
+      },
+      {
+        "category": "follow-up",
+        "question": "Is it in stock right now?",
+        "expected_document_ids": [
+          "products-48"
+        ],
+        "retrieved_ids": [
+          "products-48",
+          "products-340",
+          "products-341",
+          "products-52",
+          "products-60"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.87,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 16.68,
+        "estimated_prompt_tokens": 290,
+        "estimated_completion_tokens": 60
+      }
+    ]
+  },
+  "with_rerank": {
+    "rerank": true,
+    "overall": {
+      "num_questions": 52,
+      "num_excluded_from_retrieval_scoring": 6,
+      "recall_at": {
+        "1": 0.652,
+        "3": 0.696,
+        "5": 0.739
+      },
+      "mrr": 0.681,
+      "answer_appropriateness_rate": 1.0,
+      "groundedness_rate": 1.0,
+      "citation_correctness_rate": 0.652,
+      "avg_total_latency_ms": 138.843,
+      "avg_retrieval_latency_ms": 17.749,
+      "avg_generation_latency_ms": 0.009,
+      "avg_estimated_prompt_tokens": 340.404,
+      "avg_estimated_completion_tokens": 66.769
+    },
+    "by_category": {
+      "exact-match": {
+        "num_questions": 18,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.889,
+          "3": 0.944,
+          "5": 1.0
+        },
+        "mrr": 0.921,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.889,
+        "avg_total_latency_ms": 150.092,
+        "avg_retrieval_latency_ms": 14.78,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 385.611,
+        "avg_estimated_completion_tokens": 77.667
+      },
+      "multi-document": {
+        "num_questions": 4,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.75,
+          "3": 0.75,
+          "5": 0.75
+        },
+        "mrr": 0.75,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.75,
+        "avg_total_latency_ms": 153.542,
+        "avg_retrieval_latency_ms": 15.18,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 383.75,
+        "avg_estimated_completion_tokens": 77
+      },
+      "simple": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.5,
+          "3": 0.5,
+          "5": 0.5
+        },
+        "mrr": 0.5,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.5,
+        "avg_total_latency_ms": 160.28,
+        "avg_retrieval_latency_ms": 36.95,
+        "avg_generation_latency_ms": 0.012,
+        "avg_estimated_prompt_tokens": 364.167,
+        "avg_estimated_completion_tokens": 70.5
+      },
+      "semantic": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.167,
+          "3": 0.167,
+          "5": 0.333
+        },
+        "mrr": 0.208,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.167,
+        "avg_total_latency_ms": 167.152,
+        "avg_retrieval_latency_ms": 15.31,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 403.833,
+        "avg_estimated_completion_tokens": 78.833
+      },
+      "ambiguous": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 0.167,
+          "3": 0.333,
+          "5": 0.333
+        },
+        "mrr": 0.25,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 0.167,
+        "avg_total_latency_ms": 150.655,
+        "avg_retrieval_latency_ms": 14.725,
+        "avg_generation_latency_ms": 0.012,
+        "avg_estimated_prompt_tokens": 396.167,
+        "avg_estimated_completion_tokens": 71.333
+      },
+      "unsupported": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 6,
+        "recall_at": null,
+        "mrr": null,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": null,
+        "citation_correctness_rate": null,
+        "avg_total_latency_ms": 16.248,
+        "avg_retrieval_latency_ms": 16.217,
+        "avg_generation_latency_ms": 0.0,
+        "avg_estimated_prompt_tokens": 0,
+        "avg_estimated_completion_tokens": 0
+      },
+      "follow-up": {
+        "num_questions": 6,
+        "num_excluded_from_retrieval_scoring": 0,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "mrr": 1.0,
+        "answer_appropriateness_rate": 1.0,
+        "groundedness_rate": 1.0,
+        "citation_correctness_rate": 1.0,
+        "avg_total_latency_ms": 156.337,
+        "avg_retrieval_latency_ms": 16.167,
+        "avg_generation_latency_ms": 0.01,
+        "avg_estimated_prompt_tokens": 373.333,
+        "avg_estimated_completion_tokens": 73.667
+      }
+    },
+    "rows": [
+      {
+        "category": "exact-match",
+        "question": "Do you have a Neymar Santos third kit with a collar?",
+        "expected_document_ids": [
+          "products-4"
+        ],
+        "retrieved_ids": [
+          "products-4",
+          "products-568",
+          "products-569",
+          "products-385",
+          "products-386"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.86,
+        "rerank_latency_ms": 157.61,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 173.89,
+        "estimated_prompt_tokens": 421,
+        "estimated_completion_tokens": 79
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a Valverde Real Madrid home jersey for the 25-26 season?",
+        "expected_document_ids": [
+          "products-17"
+        ],
+        "retrieved_ids": [
+          "products-17",
+          "products-658",
+          "products-653",
+          "products-666",
+          "products-774"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.44,
+        "rerank_latency_ms": 134.09,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 149.92,
+        "estimated_prompt_tokens": 401,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "exact-match",
+        "question": "What is the price of the FC Argentina 25-26 jersey?",
+        "expected_document_ids": [
+          "products-41"
+        ],
+        "retrieved_ids": [
+          "products-41",
+          "products-42",
+          "products-39",
+          "products-40",
+          "products-28"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.09,
+        "rerank_latency_ms": 126.33,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 141.65,
+        "estimated_prompt_tokens": 346,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "exact-match",
+        "question": "I'm looking for a retro Argentina 2006 home jersey with Messi's number 19.",
+        "expected_document_ids": [
+          "products-352"
+        ],
+        "retrieved_ids": [
+          "products-352",
+          "products-1157",
+          "products-38",
+          "products-1173",
+          "products-551"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 17.52,
+        "rerank_latency_ms": 178.88,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 197.68,
+        "estimated_prompt_tokens": 405,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a black special edition Argentina jersey for Messi?",
+        "expected_document_ids": [
+          "products-227"
+        ],
+        "retrieved_ids": [
+          "products-227",
+          "products-199",
+          "products-1202",
+          "products-1173",
+          "products-352"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.77,
+        "rerank_latency_ms": 139.9,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 154.87,
+        "estimated_prompt_tokens": 381,
+        "estimated_completion_tokens": 75
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have the Argentina away jersey with Messi's number 10?",
+        "expected_document_ids": [
+          "products-276"
+        ],
+        "retrieved_ids": [
+          "products-276",
+          "products-1173",
+          "products-1283",
+          "products-550",
+          "products-196"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.5,
+        "rerank_latency_ms": 137.77,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 153.41,
+        "estimated_prompt_tokens": 402,
+        "estimated_completion_tokens": 63
+      },
+      {
+        "category": "exact-match",
+        "question": "Looking for an embroidered Argentina home 2006 jersey with Messi 19.",
+        "expected_document_ids": [
+          "products-551"
+        ],
+        "retrieved_ids": [
+          "products-551",
+          "products-1173",
+          "products-550",
+          "products-352",
+          "products-1157"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.94,
+        "rerank_latency_ms": 138.72,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 153.87,
+        "estimated_prompt_tokens": 427,
+        "estimated_completion_tokens": 91
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have white Arsenal shorts?",
+        "expected_document_ids": [
+          "products-1"
+        ],
+        "retrieved_ids": [
+          "products-1",
+          "products-1207",
+          "products-408",
+          "products-1234",
+          "products-25"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.47,
+        "rerank_latency_ms": 123.54,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 138.22,
+        "estimated_prompt_tokens": 344,
+        "estimated_completion_tokens": 71
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there an Odegaard Arsenal third jersey with a collar for 25-26?",
+        "expected_document_ids": [
+          "products-9"
+        ],
+        "retrieved_ids": [
+          "products-9",
+          "products-117",
+          "products-408",
+          "products-610",
+          "products-603"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.09,
+        "rerank_latency_ms": 128.74,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 144.16,
+        "estimated_prompt_tokens": 418,
+        "estimated_completion_tokens": 94
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a Saliba Arsenal away jersey?",
+        "expected_document_ids": [
+          "products-28"
+        ],
+        "retrieved_ids": [
+          "products-28",
+          "products-609",
+          "products-427",
+          "products-1156",
+          "products-372"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.82,
+        "rerank_latency_ms": 127.62,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 142.52,
+        "estimated_prompt_tokens": 366,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "exact-match",
+        "question": "Looking for a Gyokeres Arsenal home jersey for 25-26.",
+        "expected_document_ids": [
+          "products-12"
+        ],
+        "retrieved_ids": [
+          "products-12",
+          "products-604",
+          "products-401",
+          "products-28",
+          "products-605"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.43,
+        "rerank_latency_ms": 132.64,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 149.13,
+        "estimated_prompt_tokens": 394,
+        "estimated_completion_tokens": 85
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have FELO Genesis football boots?",
+        "expected_document_ids": [
+          "products-44"
+        ],
+        "retrieved_ids": [
+          "products-314",
+          "products-310",
+          "products-81",
+          "products-44",
+          "products-67"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.25,
+        "retrieval_latency_ms": 13.5,
+        "rerank_latency_ms": 116.39,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 130.83,
+        "estimated_prompt_tokens": 320,
+        "estimated_completion_tokens": 84
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a FELO Signature boot?",
+        "expected_document_ids": [
+          "products-48"
+        ],
+        "retrieved_ids": [
+          "products-340",
+          "products-341",
+          "products-48",
+          "products-314",
+          "products-309"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieval_latency_ms": 15.24,
+        "rerank_latency_ms": 121.51,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 137.85,
+        "estimated_prompt_tokens": 335,
+        "estimated_completion_tokens": 70
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a Virgil van Dijk Liverpool away jersey for 25-26?",
+        "expected_document_ids": [
+          "products-15"
+        ],
+        "retrieved_ids": [
+          "products-15",
+          "products-620",
+          "products-618",
+          "products-621",
+          "products-400"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.84,
+        "rerank_latency_ms": 130.66,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 146.85,
+        "estimated_prompt_tokens": 405,
+        "estimated_completion_tokens": 79
+      },
+      {
+        "category": "exact-match",
+        "question": "Looking for a Dembele PSG home jersey for 25-26.",
+        "expected_document_ids": [
+          "products-16"
+        ],
+        "retrieved_ids": [
+          "products-16",
+          "products-586",
+          "products-587",
+          "products-12",
+          "products-10"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.92,
+        "rerank_latency_ms": 124.28,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 141.47,
+        "estimated_prompt_tokens": 380,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a De Bruyne Napoli jersey for 25-26?",
+        "expected_document_ids": [
+          "products-30"
+        ],
+        "retrieved_ids": [
+          "products-30",
+          "products-584",
+          "products-585",
+          "products-7",
+          "products-41"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.85,
+        "rerank_latency_ms": 147.09,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 163.26,
+        "estimated_prompt_tokens": 406,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "exact-match",
+        "question": "Is there a Sesko Manchester United jersey for 25-26?",
+        "expected_document_ids": [
+          "products-33"
+        ],
+        "retrieved_ids": [
+          "products-33",
+          "products-637",
+          "products-405",
+          "products-403",
+          "products-630"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 16.7,
+        "rerank_latency_ms": 128.01,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 146.06,
+        "estimated_prompt_tokens": 381,
+        "estimated_completion_tokens": 67
+      },
+      {
+        "category": "exact-match",
+        "question": "Do you have a Ronaldo Al Nassr home jersey for 25-26?",
+        "expected_document_ids": [
+          "products-36"
+        ],
+        "retrieved_ids": [
+          "products-36",
+          "products-566",
+          "products-12",
+          "products-413",
+          "products-534"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.06,
+        "rerank_latency_ms": 119.63,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 136.02,
+        "estimated_prompt_tokens": 409,
+        "estimated_completion_tokens": 85
+      },
+      {
+        "category": "multi-document",
+        "question": "Do you sell the Argentina 2026 World Cup home kit with Messi?",
+        "expected_document_ids": [
+          "products-762",
+          "products-767"
+        ],
+        "retrieved_ids": [
+          "products-762",
+          "products-767",
+          "products-776",
+          "products-778",
+          "products-203"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 17.47,
+        "rerank_latency_ms": 168.4,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 187.33,
+        "estimated_prompt_tokens": 452,
+        "estimated_completion_tokens": 93
+      },
+      {
+        "category": "multi-document",
+        "question": "Is there a Wirtz Liverpool home full sleeve jersey for 25-26?",
+        "expected_document_ids": [
+          "products-10",
+          "products-37"
+        ],
+        "retrieved_ids": [
+          "products-10",
+          "products-37",
+          "products-617",
+          "products-400",
+          "products-614"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.84,
+        "rerank_latency_ms": 139.58,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 155.76,
+        "estimated_prompt_tokens": 388,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "multi-document",
+        "question": "What SEGA brand football boots do you have?",
+        "expected_document_ids": [
+          "products-46",
+          "products-50",
+          "products-53",
+          "products-54",
+          "products-59",
+          "products-65",
+          "products-66",
+          "products-70",
+          "products-71",
+          "products-83",
+          "products-322",
+          "products-326",
+          "products-328",
+          "products-331",
+          "products-342",
+          "products-343"
+        ],
+        "retrieved_ids": [
+          "products-326",
+          "products-83",
+          "products-46",
+          "products-71",
+          "products-59"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.38,
+        "rerank_latency_ms": 111.35,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 126.77,
+        "estimated_prompt_tokens": 286,
+        "estimated_completion_tokens": 66
+      },
+      {
+        "category": "multi-document",
+        "question": "Do you have FC Barcelona shorts?",
+        "expected_document_ids": [
+          "products-23",
+          "products-119",
+          "products-140"
+        ],
+        "retrieved_ids": [
+          "products-1206",
+          "products-756",
+          "products-732",
+          "products-549",
+          "products-532"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.03,
+        "rerank_latency_ms": 128.84,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 144.31,
+        "estimated_prompt_tokens": 409,
+        "estimated_completion_tokens": 67
+      },
+      {
+        "category": "simple",
+        "question": "Do you have any football boots?",
+        "expected_document_ids": [
+          "products-43",
+          "products-44",
+          "products-45",
+          "products-46",
+          "products-47",
+          "products-48",
+          "products-49",
+          "products-50",
+          "products-51",
+          "products-52"
+        ],
+        "retrieved_ids": [
+          "products-43",
+          "products-432",
+          "products-311",
+          "products-339",
+          "products-309"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.06,
+        "rerank_latency_ms": 120.02,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 135.25,
+        "estimated_prompt_tokens": 327,
+        "estimated_completion_tokens": 63
+      },
+      {
+        "category": "simple",
+        "question": "Do you sell t-shirts?",
+        "expected_document_ids": [
+          "products-95",
+          "products-96",
+          "products-286",
+          "products-287",
+          "products-288",
+          "products-289",
+          "products-290"
+        ],
+        "retrieved_ids": [
+          "products-95",
+          "products-96",
+          "products-806",
+          "products-803",
+          "products-804"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.39,
+        "rerank_latency_ms": 129.18,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 144.89,
+        "estimated_prompt_tokens": 437,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "simple",
+        "question": "Do you have track pants?",
+        "expected_document_ids": [
+          "products-97",
+          "products-98",
+          "products-100",
+          "products-235",
+          "products-236",
+          "products-237"
+        ],
+        "retrieved_ids": [
+          "products-508",
+          "products-256",
+          "products-253",
+          "products-1226",
+          "products-515"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 13.65,
+        "rerank_latency_ms": 114.47,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 129.5,
+        "estimated_prompt_tokens": 340,
+        "estimated_completion_tokens": 72
+      },
+      {
+        "category": "simple",
+        "question": "Do you have any football-branded merchandise?",
+        "expected_document_ids": [
+          "products-90",
+          "products-91",
+          "products-92",
+          "products-93",
+          "products-94",
+          "products-435",
+          "products-436",
+          "products-438"
+        ],
+        "retrieved_ids": [
+          "products-711",
+          "products-733",
+          "products-381",
+          "products-428",
+          "products-40"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.55,
+        "rerank_latency_ms": 119.55,
+        "generation_latency_ms": 0.02,
+        "total_latency_ms": 135.58,
+        "estimated_prompt_tokens": 390,
+        "estimated_completion_tokens": 77
+      },
+      {
+        "category": "simple",
+        "question": "Do you sell embroidered shorts?",
+        "expected_document_ids": [
+          "products-22",
+          "products-23",
+          "products-24",
+          "products-25",
+          "products-26",
+          "products-27",
+          "products-101",
+          "products-102"
+        ],
+        "retrieved_ids": [
+          "products-27",
+          "products-22",
+          "products-25",
+          "products-23",
+          "products-102"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 13.61,
+        "rerank_latency_ms": 113.3,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 127.91,
+        "estimated_prompt_tokens": 324,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "simple",
+        "question": "Do you have football jerseys in stock?",
+        "expected_document_ids": [
+          "products-2",
+          "products-3",
+          "products-4",
+          "products-5",
+          "products-6",
+          "products-7",
+          "products-8",
+          "products-9"
+        ],
+        "retrieved_ids": [
+          "products-1207",
+          "products-1149",
+          "products-733",
+          "products-42",
+          "products-404"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 151.44,
+        "rerank_latency_ms": 135.7,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 288.55,
+        "estimated_prompt_tokens": 367,
+        "estimated_completion_tokens": 81
+      },
+      {
+        "category": "semantic",
+        "question": "Do you have a supporter's shirt for the Albiceleste's 2026 World Cup campaign led by their captain?",
+        "expected_document_ids": [
+          "products-767"
+        ],
+        "retrieved_ids": [
+          "products-776",
+          "products-701",
+          "products-556",
+          "products-459",
+          "products-1206"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.76,
+        "rerank_latency_ms": 178.09,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 194.08,
+        "estimated_prompt_tokens": 430,
+        "estimated_completion_tokens": 92
+      },
+      {
+        "category": "semantic",
+        "question": "Are there any green-colored football boots available?",
+        "expected_document_ids": [
+          "products-56"
+        ],
+        "retrieved_ids": [
+          "products-337",
+          "products-312",
+          "products-310",
+          "products-334",
+          "products-1053"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.76,
+        "rerank_latency_ms": 135.77,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 151.81,
+        "estimated_prompt_tokens": 374,
+        "estimated_completion_tokens": 89
+      },
+      {
+        "category": "semantic",
+        "question": "Do you have any brown bottoms with a triple-stripe pattern down the side?",
+        "expected_document_ids": [
+          "products-299"
+        ],
+        "retrieved_ids": [
+          "products-688",
+          "products-687",
+          "products-254",
+          "products-695",
+          "products-508"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.53,
+        "rerank_latency_ms": 155.37,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 171.36,
+        "estimated_prompt_tokens": 417,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "semantic",
+        "question": "Is there a light grey pair of trousers with a triple-stripe design?",
+        "expected_document_ids": [
+          "products-240"
+        ],
+        "retrieved_ids": [
+          "products-507",
+          "products-244",
+          "products-250",
+          "products-240",
+          "products-509"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.25,
+        "retrieval_latency_ms": 17.79,
+        "rerank_latency_ms": 132.49,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 151.61,
+        "estimated_prompt_tokens": 366,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "semantic",
+        "question": "Is there a home shirt for Real Madrid's Uruguayan midfielder for the upcoming season?",
+        "expected_document_ids": [
+          "products-17"
+        ],
+        "retrieved_ids": [
+          "products-819",
+          "products-656",
+          "products-657",
+          "products-553",
+          "products-707"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.96,
+        "rerank_latency_ms": 140.71,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 157.21,
+        "estimated_prompt_tokens": 442,
+        "estimated_completion_tokens": 81
+      },
+      {
+        "category": "semantic",
+        "question": "Do you have a vintage-style Argentine home shirt from the mid-2000s with the number 19?",
+        "expected_document_ids": [
+          "products-352"
+        ],
+        "retrieved_ids": [
+          "products-352",
+          "products-1157",
+          "products-38",
+          "products-551",
+          "products-208"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.06,
+        "rerank_latency_ms": 160.36,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 176.84,
+        "estimated_prompt_tokens": 394,
+        "estimated_completion_tokens": 73
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have any Messi jerseys?",
+        "expected_document_ids": [
+          "products-11",
+          "products-38",
+          "products-111",
+          "products-161",
+          "products-184",
+          "products-185",
+          "products-186",
+          "products-193",
+          "products-196",
+          "products-199",
+          "products-203",
+          "products-208",
+          "products-211",
+          "products-221",
+          "products-227",
+          "products-276",
+          "products-352",
+          "products-390",
+          "products-443",
+          "products-483"
+        ],
+        "retrieved_ids": [
+          "products-1202",
+          "products-1169",
+          "products-1157",
+          "products-732",
+          "products-756"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.18,
+        "rerank_latency_ms": 129.29,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 144.86,
+        "estimated_prompt_tokens": 392,
+        "estimated_completion_tokens": 70
+      },
+      {
+        "category": "ambiguous",
+        "question": "Are there Ronaldo jerseys available?",
+        "expected_document_ids": [
+          "products-36",
+          "products-118",
+          "products-122",
+          "products-151",
+          "products-162",
+          "products-168",
+          "products-169",
+          "products-171",
+          "products-534",
+          "products-566",
+          "products-817"
+        ],
+        "retrieved_ids": [
+          "products-817",
+          "products-118",
+          "products-151",
+          "products-1158",
+          "products-122"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 14.54,
+        "rerank_latency_ms": 148.39,
+        "generation_latency_ms": 0.02,
+        "total_latency_ms": 164.31,
+        "estimated_prompt_tokens": 420,
+        "estimated_completion_tokens": 71
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have Barcelona jerseys?",
+        "expected_document_ids": [
+          "products-2",
+          "products-5",
+          "products-7",
+          "products-23",
+          "products-29",
+          "products-34",
+          "products-99",
+          "products-111",
+          "products-119",
+          "products-125",
+          "products-128",
+          "products-140",
+          "products-149",
+          "products-150",
+          "products-153",
+          "products-154",
+          "products-161",
+          "products-173",
+          "products-175",
+          "products-184"
+        ],
+        "retrieved_ids": [
+          "products-1228",
+          "products-409",
+          "products-849",
+          "products-415",
+          "products-732"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 14.4,
+        "rerank_latency_ms": 136.06,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 151.87,
+        "estimated_prompt_tokens": 399,
+        "estimated_completion_tokens": 65
+      },
+      {
+        "category": "ambiguous",
+        "question": "Is there any Real Madrid merchandise?",
+        "expected_document_ids": [
+          "products-3",
+          "products-6",
+          "products-17",
+          "products-27",
+          "products-31",
+          "products-32",
+          "products-100",
+          "products-105",
+          "products-106",
+          "products-113",
+          "products-129",
+          "products-132",
+          "products-156",
+          "products-168",
+          "products-169",
+          "products-170",
+          "products-171",
+          "products-172",
+          "products-182",
+          "products-190"
+        ],
+        "retrieved_ids": [
+          "products-410",
+          "products-1227",
+          "products-402",
+          "products-554",
+          "products-417"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 16.69,
+        "rerank_latency_ms": 140.64,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 158.76,
+        "estimated_prompt_tokens": 405,
+        "estimated_completion_tokens": 77
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have Argentina jerseys?",
+        "expected_document_ids": [
+          "products-38",
+          "products-41",
+          "products-196",
+          "products-199",
+          "products-203",
+          "products-208",
+          "products-216",
+          "products-217",
+          "products-227",
+          "products-276",
+          "products-352",
+          "products-356",
+          "products-487",
+          "products-539",
+          "products-550",
+          "products-551",
+          "products-735",
+          "products-762",
+          "products-767",
+          "products-776"
+        ],
+        "retrieved_ids": [
+          "products-1157",
+          "products-735",
+          "products-38",
+          "products-352",
+          "products-1173"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "retrieval_latency_ms": 15.14,
+        "rerank_latency_ms": 136.75,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 153.26,
+        "estimated_prompt_tokens": 384,
+        "estimated_completion_tokens": 79
+      },
+      {
+        "category": "ambiguous",
+        "question": "Do you have Liverpool jerseys?",
+        "expected_document_ids": [
+          "products-10",
+          "products-15",
+          "products-37",
+          "products-102",
+          "products-107",
+          "products-112",
+          "products-116",
+          "products-120",
+          "products-123",
+          "products-126",
+          "products-127",
+          "products-134",
+          "products-148",
+          "products-165",
+          "products-167",
+          "products-290",
+          "products-291",
+          "products-292",
+          "products-293",
+          "products-357"
+        ],
+        "retrieved_ids": [
+          "products-1149",
+          "products-711",
+          "products-1167",
+          "products-733",
+          "products-400"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": false,
+        "recall_at": {
+          "1": 0.0,
+          "3": 0.0,
+          "5": 0.0
+        },
+        "reciprocal_rank": 0.0,
+        "retrieval_latency_ms": 13.4,
+        "rerank_latency_ms": 116.35,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 130.87,
+        "estimated_prompt_tokens": 377,
+        "estimated_completion_tokens": 66
+      },
+      {
+        "category": "unsupported",
+        "question": "What is the capital of France?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 15.16,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 15.19,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "What is the boiling point of tungsten?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 16.08,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 16.12,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "Can you help me file my taxes?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 17.26,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 17.29,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "What's the weather like today?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 17.45,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 17.48,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "Do you sell laptops or smartphones?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 15.93,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 15.96,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "unsupported",
+        "question": "Can you recommend a good restaurant nearby?",
+        "expected_document_ids": [],
+        "retrieved_ids": [],
+        "outcome": "insufficient_information",
+        "expected_outcome": "insufficient_information",
+        "appropriate": true,
+        "grounded": null,
+        "citation_correct": null,
+        "recall_at": null,
+        "reciprocal_rank": null,
+        "retrieval_latency_ms": 15.42,
+        "rerank_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 15.45,
+        "estimated_prompt_tokens": 0,
+        "estimated_completion_tokens": 0
+      },
+      {
+        "category": "follow-up",
+        "question": "Is it available in size L?",
+        "expected_document_ids": [
+          "products-4"
+        ],
+        "retrieved_ids": [
+          "products-4",
+          "products-569",
+          "products-568",
+          "products-385",
+          "products-8"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 16.95,
+        "rerank_latency_ms": 156.08,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 174.36,
+        "estimated_prompt_tokens": 419,
+        "estimated_completion_tokens": 79
+      },
+      {
+        "category": "follow-up",
+        "question": "How much does it cost?",
+        "expected_document_ids": [
+          "products-44"
+        ],
+        "retrieved_ids": [
+          "products-44",
+          "products-310",
+          "products-67",
+          "products-314",
+          "products-81"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 17.89,
+        "rerank_latency_ms": 123.36,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 142.34,
+        "estimated_prompt_tokens": 318,
+        "estimated_completion_tokens": 60
+      },
+      {
+        "category": "follow-up",
+        "question": "What sizes come in stock?",
+        "expected_document_ids": [
+          "products-33"
+        ],
+        "retrieved_ids": [
+          "products-33",
+          "products-637",
+          "products-405",
+          "products-403",
+          "products-42"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.23,
+        "rerank_latency_ms": 130.39,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 146.89,
+        "estimated_prompt_tokens": 351,
+        "estimated_completion_tokens": 67
+      },
+      {
+        "category": "follow-up",
+        "question": "Can you tell me the price?",
+        "expected_document_ids": [
+          "products-30"
+        ],
+        "retrieved_ids": [
+          "products-30",
+          "products-584",
+          "products-585",
+          "products-7",
+          "products-41"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.34,
+        "rerank_latency_ms": 146.48,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 163.13,
+        "estimated_prompt_tokens": 398,
+        "estimated_completion_tokens": 82
+      },
+      {
+        "category": "follow-up",
+        "question": "What category is it listed under?",
+        "expected_document_ids": [
+          "products-9"
+        ],
+        "retrieved_ids": [
+          "products-9",
+          "products-117",
+          "products-408",
+          "products-610",
+          "products-603"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 15.37,
+        "rerank_latency_ms": 148.13,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 164.88,
+        "estimated_prompt_tokens": 407,
+        "estimated_completion_tokens": 94
+      },
+      {
+        "category": "follow-up",
+        "question": "Is it in stock right now?",
+        "expected_document_ids": [
+          "products-48"
+        ],
+        "retrieved_ids": [
+          "products-48",
+          "products-340",
+          "products-341",
+          "products-314",
+          "products-318"
+        ],
+        "outcome": "answered",
+        "expected_outcome": "answered",
+        "appropriate": true,
+        "grounded": true,
+        "citation_correct": true,
+        "recall_at": {
+          "1": 1.0,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "retrieval_latency_ms": 16.22,
+        "rerank_latency_ms": 129.08,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 146.42,
+        "estimated_prompt_tokens": 347,
+        "estimated_completion_tokens": 60
+      }
+    ]
+  }
+}

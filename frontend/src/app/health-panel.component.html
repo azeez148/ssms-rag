@@ -1,0 +1,20 @@
+<section class="panel">
+  <h2>Health</h2>
+  <p class="hint">Plan Set 1 — GET /health</p>
+
+  <button (click)="check()" [disabled]="loading">
+    {{ loading ? 'Checking...' : 'Check health' }}
+  </button>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (result) {
+    <dl class="kv">
+      <dt>status</dt><dd>{{ result.status }}</dd>
+      <dt>app_name</dt><dd>{{ result.app_name }}</dd>
+      <dt>app_env</dt><dd>{{ result.app_env }}</dd>
+    </dl>
+  }
+</section>

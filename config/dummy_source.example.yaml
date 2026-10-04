@@ -1,0 +1,19 @@
+source:
+  type: postgres
+  name: dummy_source
+  knowledge_base_id: dummy
+
+  connection:
+    env: DUMMY_SOURCE_DATABASE_URL
+
+  entities:
+    - name: items
+      query: >
+        SELECT id, name, description, category FROM items
+      id_column: id
+      title_column: name
+      content_template: >
+        Name: {name}
+        Description: {description}
+      metadata_columns:
+        - category

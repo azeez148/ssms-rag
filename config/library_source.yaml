@@ -1,0 +1,32 @@
+source:
+  type: postgres
+  name: library
+  knowledge_base_id: library
+  title: Library
+  description: "A small catalog of classic and modern books."
+  suggested_questions:
+    - "Is there a dystopian novel about a totalitarian surveillance state?"
+    - "Recommend a fantasy book"
+    - "Which books did Jane Austen write?"
+
+  connection:
+    env: LIBRARY_DATABASE_URL
+
+  entities:
+    - name: books
+      query: >
+        SELECT id, title, author, genre, publication_year, description
+        FROM books
+      id_column: id
+      title_column: title
+      content_template: >
+        Title: {title}
+        Author: {author}
+        Genre: {genre}
+        Published: {publication_year}
+        Description: {description}
+      metadata_columns:
+        - genre
+        - author
+      static_metadata:
+        entity_type: book
